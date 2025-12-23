@@ -48,7 +48,7 @@ uv run pytest
 ### 課題1
 
 1. `src/he/elgamal.py`の指示コメントに従ってElGamal暗号を実装せよ．
-1. `tests/test_kadai1.py`にある`Kadai1`クラスの指示コメントに従って，正当性を確認するテストを書け．なお，テストを実行するコマンドは以下である．
+1. `tests/test_kadai1.py`にある`TestKadai1`クラスの指示コメントに従って，正当性を確認するテストを書け．なお，テストを実行するコマンドは以下である．
 
     ```bash
     uv run pytest tests/test_kadai1.py -v
@@ -59,13 +59,13 @@ uv run pytest
 ### 課題2
 
 1. 課題1で実装したElGamal暗号をベースに，`src/he/elgamal.py`の指示コメントに従って，暗号化したまま平文同士の乗算を行う関数`hmul`及び累乗を行う関数`hpow`を実装せよ．
-1. `tests/test_kadai2.py`の`Kadai2`クラスの指示コメントに従って，正しく乗算及び累乗ができているかを確認するテストを書け．なお，テストを実行するコマンドはそれぞれ以下である．
+1. `tests/test_kadai2.py`の`TestKadai2`クラスの指示コメントに従って，正しく乗算及び累乗ができているかを確認するテストを書け．なお，テストを実行するコマンドはそれぞれ以下である．
 
     ```bash
     uv run pytest tests/test_kadai2.py::TestKadai2::test_hmul -v
     uv run pytest tests/test_kadai2.py::TestKadai2::test_hpow -v
     ```
-1. `tests/test_kadai2.py`にある`Kadai2`クラスの指示コメントに従って，乗算及び累乗を行うプログラム及びテストを書け．なお，テストを実行するコマンドはそれぞれ以下である．
+1. `tests/test_kadai2.py`にある`TestKadai2`クラスの指示コメントに従って，乗算及び累乗を行うプログラム及びテストを書け．なお，テストを実行するコマンドはそれぞれ以下である．
 
     ```bash
     uv run pytest tests/test_kadai2.py::TestKadai2::test_many_hmul -v
@@ -79,7 +79,7 @@ uv run pytest
 課題1及び2が完成した人のみ取り組んでください．
 
 1. `src/he/lifted_elgamal.py`の指示コメントに従って，Lifted ElGamal暗号を実装せよ．
-1. `tests/test_kadai3.py`にある`Kadai3`クラスの指示コメントに従って，正しく動作するかを確認するテストを書け．なお，テストを実行するコマンドは以下である．
+1. `tests/test_kadai3.py`にある`TestKadai3`クラスの指示コメントに従って，正しく動作するかを確認するテストを書け．なお，テストを実行するコマンドは以下である．
 
     ```bash
     uv run pytest tests/test_kadai3.py::TestKadai3::test_correctness -v
@@ -87,17 +87,17 @@ uv run pytest
 1. Lifted ElGamal暗号の正当性が成り立つことを実際に確認せよ．
 1. 実装したLifted ElGamal暗号をベースに，`src/he/lifted_elgamal.py`の指示コメントに従って，暗号化したまま平文同士の加算を行う関数`hadd`及びスカラー倍を行う関数`hscalar`を実装せよ．
 1. Lifted ElGamal暗号の加法準同型性が成り立つことを実際に確認せよ．
-1. `tests/test_kadai3.py`の`Kadai3`クラスの指示コメントに従って，正しく加算及びスカラー倍ができているかを確認するテストを書け．なお，テストを実行するコマンドはそれぞれ以下である．
+1. `tests/test_kadai3.py`の`TestKadai3`クラスの指示コメントに従って，正しく加算及びスカラー倍ができているかを確認するテストを書け．なお，テストを実行するコマンドはそれぞれ以下である．
 
     ```bash
-    uv run pytest tests/test_kadai2.py::TestKadai3::test_hmul -v
-    uv run pytest tests/test_kadai2.py::TestKadai3::test_hscalar -v
+    uv run pytest tests/test_kadai3.py::TestKadai3::test_hmul -v
+    uv run pytest tests/test_kadai3.py::TestKadai3::test_hscalar -v
     ```
-1. `tests/test_kadai3.py`にある`Kadai3`クラスの指示コメントに従って，加算及びスカラー倍を計算するプログラム及びテストを書け．
+1. `tests/test_kadai3.py`にある`TestKadai3`クラスの指示コメントに従って，加算及びスカラー倍を計算するプログラム及びテストを書け．
 
     ```bash
-    uv run pytest tests/test_kadai2.py::TestKadai3::test_many_hadd -v
-    uv run pytest tests/test_kadai2.py::TestKadai3::test_hadd_and_hscalar -v
+    uv run pytest tests/test_kadai3.py::TestKadai3::test_many_hadd -v
+    uv run pytest tests/test_kadai3.py::TestKadai3::test_hadd_and_hscalar -v
     ```
 1. 上記で実装した平均を計算するプログラムにおいて復号を許しているが，この妥当性について安全性の面から考察せよ．
 1. 今回，Lifted ElGamal暗号の実装に用いているパラメータは実際に使用されているものと比較して小さい．実際の大きいパラメータを用いた際（楕円曲線を用いた場合，位数は$2^{256}$程度）に考慮すべきことについて考察せよ．
