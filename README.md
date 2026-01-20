@@ -71,7 +71,7 @@ uv run pytest
     uv run pytest tests/test_kadai2.py::TestKadai2::test_many_hmul -v
     uv run pytest tests/test_kadai2.py::TestKadai2::test_hmul_and_hpow -v
     ```
-1. ElGamal暗号の加法準同型性が成り立つことを実際に確認せよ．
+1. ElGamal暗号の乗法準同型性が成り立つことを実際に確認せよ．
 
 
 ### 課題3
